@@ -1,0 +1,20 @@
+<main class="flex justify-center items-center h-screen w-full overflow-x-hidden overflow-y-auto bg-Off_Black">
+  <!-- Centering the content vertically and horizontally -->
+  <div class="flex justify-center items-center h-auto w-auto landscape:m-auto landscape:p-10">
+    <!-- Main container for the profile card -->
+    <div class="flex flex-col justify-center items-center bg-Dark_Grey font-Inter h-auto w-96 p-5 rounded-xl Large_Mobile_Design:w-80 Small_Mobile_Design:w-64 Small_Mobile_Design:p-4">
+      <!-- Avatar image of Jessica -->
+      <img [src]="image_path_link" [alt]="image_description" class="rounded-full h-20 w-20 Small_Mobile_Design:h-12 Small_Mobile_Design:w-12" />
+      <!-- Full name displayed as a heading -->
+      <h1 class="text-White font-bold text-2xl mt-5 mb-1 Small_Mobile_Design:text-base Small_Mobile_Design:mt-4 Small_Mobile_Design:mb-0.5">{{full_name}}</h1>
+      <!-- Location of Jessica -->
+      <p class="text-Green font-semibold text-sm Small_Mobile_Design:text-xs">{{location}}</p>
+      <!-- Role description -->
+      <p class="text-White font-normal text-sm mt-5 mb-2.5 Small_Mobile_Design:text-[10px] Small_Mobile_Design:mt-4 Small_Mobile_Design:mb-1">{{role}}</p>
+      <!-- Social media links generated dynamically from the array -->
+      <div class="w-full my-1.5 Small_Mobile_Design:my-1" *ngFor="let links of social_links">
+        <a [href]="links.link_url" target="_blank" class="block bg-Grey text-White font-semibold text-center w-full text-sm px-5 py-3 rounded-xl transition-all ease-in-out duration-100 hover:bg-Green hover:text-Off_Black Small_Mobile_Design:text-xs Small_Mobile_Design:px-4 Small_Mobile_Design:py-3.5">{{links.link_name}}</a>
+      </div>
+    </div>
+  </div>
+</main>
