@@ -20,7 +20,7 @@ module.exports = {
       },
       // Custom font family to be used in the project
       fontFamily: {
-        "Inter": ["Inter", "sans-serif"] // Outfit font with fallback to sans-serif
+        "Inter": ["Inter", "sans-serif"] // Inter font with fallback to sans-serif
       }
     },
   },
